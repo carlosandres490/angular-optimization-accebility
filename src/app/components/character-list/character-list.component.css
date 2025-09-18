@@ -107,6 +107,11 @@ h1 {
   transform: translateY(-8px);
 }
 
+.character-card:focus-within {
+  outline: 3px solid #3498db;
+  outline-offset: 2px;
+}
+
 .character-image-container {
   position: relative;
   overflow: hidden;
@@ -229,6 +234,11 @@ h1 {
   cursor: not-allowed;
 }
 
+.pagination-btn:focus {
+  outline: 3px solid #3498db;
+  outline-offset: 2px;
+}
+
 .page-info {
   display: flex;
   align-items: center;
@@ -251,6 +261,223 @@ h1 {
 .page-total {
   color: #34495e;
   font-weight: 600;
+}
+
+/* High Contrast Mode Support */
+@media (prefers-contrast: high) {
+  h1, .subtitle {
+    color: black;
+    text-shadow: none;
+    background: white;
+    padding: 10px;
+    border-radius: 5px;
+  }
+  
+  .loading {
+    color: black;
+    background: white;
+    border: 2px solid black;
+    border-radius: 10px;
+  }
+  
+  .portal-ring {
+    border-top-color: black;
+  }
+  
+  .error {
+    background: white;
+    color: red;
+    border: 2px solid red;
+  }
+  
+  .retry-btn {
+    background: black;
+    color: white;
+    border: 2px solid black;
+  }
+  
+  .character-card {
+    background: white;
+    border: 2px solid black;
+    box-shadow: none;
+  }
+  
+  .character-card:focus-within {
+    outline: 3px solid blue;
+  }
+  
+  .status-alive {
+    background: green;
+    color: white;
+  }
+  
+  .status-dead {
+    background: red;
+    color: white;
+  }
+  
+  .status-unknown {
+    background: black;
+    color: white;
+  }
+  
+  .pagination-btn {
+    background: black;
+    color: white;
+    border: 2px solid black;
+  }
+  
+  .pagination-btn:hover:not(:disabled) {
+    background: #333;
+    transform: none;
+  }
+  
+  .pagination-btn:disabled {
+    background: gray;
+    color: white;
+  }
+  
+  .page-info {
+    background: white;
+    border: 2px solid black;
+  }
+}
+
+/* Forced Colors Mode Support */
+@media (forced-colors: active) {
+  .character-container {
+    forced-color-adjust: none;
+  }
+  
+  h1, .subtitle {
+    color: CanvasText;
+    background: Canvas;
+    text-shadow: none;
+    forced-color-adjust: none;
+  }
+  
+  .loading {
+    color: CanvasText;
+    background: Canvas;
+    border: 1px solid CanvasText;
+    forced-color-adjust: none;
+  }
+  
+  .portal-ring {
+    border-top-color: CanvasText;
+    forced-color-adjust: none;
+  }
+  
+  .error {
+    background: Canvas;
+    color: CanvasText;
+    border: 1px solid CanvasText;
+    forced-color-adjust: none;
+  }
+  
+  .retry-btn {
+    background: ButtonFace;
+    color: ButtonText;
+    border: 1px solid ButtonText;
+    forced-color-adjust: none;
+  }
+  
+  .character-card {
+    background: Canvas;
+    color: CanvasText;
+    border: 1px solid CanvasText;
+    box-shadow: none;
+    forced-color-adjust: none;
+  }
+  
+  .character-card:focus-within {
+    outline: 2px solid Highlight;
+    forced-color-adjust: none;
+  }
+  
+  .status-indicator {
+    background: CanvasText;
+    color: Canvas;
+    forced-color-adjust: none;
+  }
+  
+  .character-name {
+    color: CanvasText;
+    forced-color-adjust: none;
+  }
+  
+  .detail-label, .detail-value {
+    color: CanvasText;
+    forced-color-adjust: none;
+  }
+  
+  .location-name, .origin-name {
+    color: LinkText;
+    forced-color-adjust: none;
+  }
+  
+  .pagination-btn {
+    background: ButtonFace;
+    color: ButtonText;
+    border: 1px solid ButtonText;
+    forced-color-adjust: none;
+  }
+  
+  .pagination-btn:hover:not(:disabled) {
+    background: Highlight;
+    color: HighlightText;
+    transform: none;
+  }
+  
+  .pagination-btn:disabled {
+    background: GrayText;
+    color: Canvas;
+  }
+  
+  .pagination-btn:focus {
+    outline: 2px solid Highlight;
+    forced-color-adjust: none;
+  }
+  
+  .page-info {
+    background: Canvas;
+    color: CanvasText;
+    border: 1px solid CanvasText;
+    forced-color-adjust: none;
+  }
+  
+  .page-current {
+    color: CanvasText;
+  }
+  
+  .page-separator, .page-total {
+    color: CanvasText;
+  }
+}
+
+/* Reduced Motion Support */
+@media (prefers-reduced-motion: reduce) {
+  .portal-ring {
+    animation: none;
+  }
+  
+  .character-card,
+  .pagination-btn,
+  .character-image {
+    transition: none;
+  }
+  
+  .character-card:hover {
+    transform: none;
+  }
+  
+  .character-card:hover .character-image {
+    transform: none;
+  }
+  
+  .pagination-btn:hover:not(:disabled) {
+    transform: none;
+  }
 }
 
 @media (max-width: 768px) {

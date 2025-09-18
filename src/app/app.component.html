@@ -1,18 +1,30 @@
 <div class="app-container">
-  <header class="app-header">
-    <img src="assets/o6cwlzg3exk41.png" alt="Rick and Morty Banner" class="banner-image">
+  <a href="#main-content" class="skip-to-content" (click)="skipToContent()">
+    Skip to main content
+  </a>
+  
+  <header class="app-header" role="banner">
+    <img src="assets/o6cwlzg3exk41.png" 
+         alt="Rick and Morty Banner - Explore the Multiverse" 
+         class="banner-image">
   </header>
 
-  <main class="main-content">
+  <main class="main-content" id="main-content" tabindex="-1" role="main">
     <app-character-list></app-character-list>
   </main>
 
-  <footer class="app-footer">
+  <footer class="app-footer" role="contentinfo">
     <div class="footer-content">
-      <img src="assets/rick-and-morty-escape-facebook-cover.jpg" alt="Rick and Morty Footer" class="footer-image">
+      <img src="assets/rick-and-morty-escape-facebook-cover.jpg" 
+           alt="Rick and Morty Footer" 
+           class="footer-image">
       <div class="footer-text">
         <p>&copy; 2025 Rick and Morty Character Explorer</p>
-        <p>Data provided by <a href="https://rickandmortyapi.com/" target="_blank" rel="noopener">The Rick and Morty API</a></p>
+        <p>Data provided by <a href="https://rickandmortyapi.com/" 
+                               target="_blank" 
+                               rel="noopener"
+                               aria-label="The Rick and Morty API (opens in new tab)">
+                               The Rick and Morty API</a></p>
       </div>
     </div>
   </footer>

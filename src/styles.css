@@ -35,6 +35,106 @@ img {
   height: auto;
 }
 
+/* High Contrast Mode Support */
+@media (prefers-contrast: high) {
+  body {
+    background: white;
+    color: black;
+  }
+  
+  .app-container {
+    background: white !important;
+  }
+  
+  .character-card {
+    border: 2px solid black !important;
+    background: white !important;
+    color: black !important;
+  }
+  
+  .pagination-btn {
+    background: black !important;
+    color: white !important;
+    border: 2px solid black !important;
+  }
+  
+  .pagination-btn:disabled {
+    background: gray !important;
+    color: white !important;
+  }
+}
+
+/* Forced Colors Mode Support */
+@media (forced-colors: active) {
+  body {
+    background: Canvas;
+    color: CanvasText;
+  }
+  
+  .app-container {
+    background: Canvas;
+    color: CanvasText;
+  }
+  
+  .character-card {
+    background: Canvas;
+    color: CanvasText;
+    border: 1px solid CanvasText;
+    forced-color-adjust: none;
+  }
+  
+  .pagination-btn {
+    background: ButtonFace;
+    color: ButtonText;
+    border: 1px solid ButtonText;
+    forced-color-adjust: none;
+  }
+  
+  .pagination-btn:hover:not(:disabled) {
+    background: Highlight;
+    color: HighlightText;
+  }
+  
+  .pagination-btn:disabled {
+    background: GrayText;
+    color: Canvas;
+  }
+  
+  .status-indicator {
+    background: CanvasText !important;
+    color: Canvas !important;
+    forced-color-adjust: none;
+  }
+  
+  .app-header, .app-footer {
+    background: Canvas;
+    border: 1px solid CanvasText;
+    forced-color-adjust: none;
+  }
+  
+  a {
+    color: LinkText;
+    forced-color-adjust: none;
+  }
+  
+  a:visited {
+    color: VisitedText;
+  }
+  
+  .banner-image, .footer-image {
+    forced-color-adjust: none;
+  }
+}
+
+/* Reduced Motion Support */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
 /* Scrollbar Styling */
 ::-webkit-scrollbar {
   width: 8px;
@@ -53,10 +153,34 @@ img {
   background: rgba(255, 255, 255, 0.5);
 }
 
+/* High contrast scrollbar */
+@media (prefers-contrast: high) {
+  ::-webkit-scrollbar-track {
+    background: white;
+    border: 1px solid black;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: black;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background: #333;
+  }
+}
+
 /* Selection styling */
 ::selection {
   background: rgba(46, 204, 113, 0.3);
   color: white;
+}
+
+@media (forced-colors: active) {
+  ::selection {
+    background: Highlight;
+    color: HighlightText;
+    forced-color-adjust: none;
+  }
 }
 
 /* Focus styles for accessibility */
@@ -66,4 +190,41 @@ select:focus,
 textarea:focus {
   outline: 2px solid #3498db;
   outline-offset: 2px;
+}
+
+@media (forced-colors: active) {
+  button:focus,
+  input:focus,
+  select:focus,
+  textarea:focus {
+    outline: 2px solid Highlight;
+    outline-offset: 2px;
+    forced-color-adjust: none;
+  }
+}
+
+/* Skip to content link for screen readers */
+.skip-to-content {
+  position: absolute;
+  top: -40px;
+  left: 6px;
+  background: #000;
+  color: #fff;
+  padding: 8px;
+  text-decoration: none;
+  border-radius: 4px;
+  z-index: 1000;
+}
+
+.skip-to-content:focus {
+  top: 6px;
+}
+
+@media (forced-colors: active) {
+  .skip-to-content {
+    background: ButtonFace;
+    color: ButtonText;
+    border: 1px solid ButtonText;
+    forced-color-adjust: none;
+  }
 }
