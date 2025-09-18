@@ -65,7 +65,7 @@ describe('CharacterListComponent', () => {
     fixture = TestBed.createComponent(CharacterListComponent);
     component = fixture.componentInstance;
     mockRickMortyService = TestBed.inject(RickMortyService) as jest.Mocked<RickMortyService>;
-    
+
     // No llamar fixture.detectChanges() aquí para evitar ngOnInit automático
   });
 
@@ -205,14 +205,14 @@ describe('CharacterListComponent', () => {
       component.characters = mockCharacters;
       component.loading = false;
       component.error = '';
-      
+
       expect(() => fixture.detectChanges()).not.toThrow();
       expect(component.characters.length).toBe(2);
     });
 
     it('should render component without errors', () => {
       mockRickMortyService.getCharacters.mockReturnValue(of(mockApiResponse));
-      
+
       expect(() => fixture.detectChanges()).not.toThrow();
       expect(component).toBeTruthy();
     });

@@ -37,7 +37,7 @@ describe('AppComponent', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement as HTMLElement;
-    
+
     expect(compiled.querySelector('.app-container')).toBeTruthy();
     expect(compiled.querySelector('.app-header')).toBeTruthy();
     expect(compiled.querySelector('.main-content')).toBeTruthy();
@@ -48,7 +48,7 @@ describe('AppComponent', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement as HTMLElement;
-    
+
     expect(compiled.querySelector('app-character-list')).toBeTruthy();
   });
 
@@ -56,7 +56,7 @@ describe('AppComponent', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement as HTMLElement;
-    
+
     const footer = compiled.querySelector('.footer-text');
     expect(footer?.textContent).toContain('2025 Rick and Morty Character Explorer');
     expect(footer?.textContent).toContain('The Rick and Morty API');
