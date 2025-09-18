@@ -90,26 +90,37 @@ h1 {
 
 .characters-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-  gap: 25px;
-  margin-bottom: 40px;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.5rem;
+  padding: 1rem;
+  margin: 0;
+  list-style: none; /* Remove default list styling */
 }
 
 .character-card {
-  background: rgba(255, 255, 255, 0.95);
-  border-radius: 15px;
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
-  overflow: hidden;
-  transition: transform 0.3s ease;
+  display: block; /* Reset li display to block */
+  background: #ffffff;
+  border: 2px solid #495057;
+  border-radius: 12px;
+  padding: 1.5rem;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+  position: relative;
+  margin: 0; /* Reset li margins */
+  color: #212529; /* High contrast text */
 }
 
 .character-card:hover {
   transform: translateY(-8px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
+  border-color: #0d6efd;
 }
 
 .character-card:focus-within {
-  outline: 3px solid #3498db;
+  outline: 3px solid #0d6efd;
   outline-offset: 2px;
+  border-color: #0d6efd;
+  box-shadow: 0 4px 12px rgba(13, 110, 253, 0.3);
 }
 
 .character-image-container {
@@ -144,18 +155,21 @@ h1 {
 }
 
 .status-alive {
-  background: #27ae60;
-  color: white;
+  background: #198754;
+  color: #ffffff;
+  border: 1px solid #146c43;
 }
 
 .status-dead {
-  background: #e74c3c;
-  color: white;
+  background: #dc3545;
+  color: #ffffff;
+  border: 1px solid #b02a37;
 }
 
 .status-unknown {
-  background: #95a5a6;
-  color: white;
+  background: #6c757d;
+  color: #ffffff;
+  border: 1px solid #495057;
 }
 
 .character-info {
@@ -165,7 +179,7 @@ h1 {
 .character-name {
   margin: 0 0 15px 0;
   font-size: 1.4rem;
-  color: #2c3e50;
+  color: #212529;
   font-weight: bold;
 }
 
@@ -178,12 +192,12 @@ h1 {
 
 .detail-label {
   font-weight: 600;
-  color: #34495e;
+  color: #212529;
   font-size: 0.9rem;
 }
 
 .detail-value {
-  color: #7f8c8d;
+  color: #495057;
   font-size: 0.9rem;
 }
 
@@ -196,7 +210,7 @@ h1 {
 .location, .origin {
   margin: 10px 0;
   font-size: 0.85rem;
-  color: #34495e;
+  color: #495057;
 }
 
 .location-name, .origin-name {
@@ -272,71 +286,71 @@ h1 {
     padding: 10px;
     border-radius: 5px;
   }
-  
+
   .loading {
     color: black;
     background: white;
     border: 2px solid black;
     border-radius: 10px;
   }
-  
+
   .portal-ring {
     border-top-color: black;
   }
-  
+
   .error {
     background: white;
     color: red;
     border: 2px solid red;
   }
-  
+
   .retry-btn {
     background: black;
     color: white;
     border: 2px solid black;
   }
-  
+
   .character-card {
     background: white;
     border: 2px solid black;
     box-shadow: none;
   }
-  
+
   .character-card:focus-within {
     outline: 3px solid blue;
   }
-  
+
   .status-alive {
     background: green;
     color: white;
   }
-  
+
   .status-dead {
     background: red;
     color: white;
   }
-  
+
   .status-unknown {
     background: black;
     color: white;
   }
-  
+
   .pagination-btn {
     background: black;
     color: white;
     border: 2px solid black;
   }
-  
+
   .pagination-btn:hover:not(:disabled) {
     background: #333;
     transform: none;
   }
-  
+
   .pagination-btn:disabled {
     background: gray;
     color: white;
   }
-  
+
   .page-info {
     background: white;
     border: 2px solid black;
@@ -348,40 +362,40 @@ h1 {
   .character-container {
     forced-color-adjust: none;
   }
-  
+
   h1, .subtitle {
     color: CanvasText;
     background: Canvas;
     text-shadow: none;
     forced-color-adjust: none;
   }
-  
+
   .loading {
     color: CanvasText;
     background: Canvas;
     border: 1px solid CanvasText;
     forced-color-adjust: none;
   }
-  
+
   .portal-ring {
     border-top-color: CanvasText;
     forced-color-adjust: none;
   }
-  
+
   .error {
     background: Canvas;
     color: CanvasText;
     border: 1px solid CanvasText;
     forced-color-adjust: none;
   }
-  
+
   .retry-btn {
     background: ButtonFace;
     color: ButtonText;
     border: 1px solid ButtonText;
     forced-color-adjust: none;
   }
-  
+
   .character-card {
     background: Canvas;
     color: CanvasText;
@@ -389,67 +403,67 @@ h1 {
     box-shadow: none;
     forced-color-adjust: none;
   }
-  
+
   .character-card:focus-within {
     outline: 2px solid Highlight;
     forced-color-adjust: none;
   }
-  
+
   .status-indicator {
     background: CanvasText;
     color: Canvas;
     forced-color-adjust: none;
   }
-  
+
   .character-name {
     color: CanvasText;
     forced-color-adjust: none;
   }
-  
+
   .detail-label, .detail-value {
     color: CanvasText;
     forced-color-adjust: none;
   }
-  
+
   .location-name, .origin-name {
     color: LinkText;
     forced-color-adjust: none;
   }
-  
+
   .pagination-btn {
     background: ButtonFace;
     color: ButtonText;
     border: 1px solid ButtonText;
     forced-color-adjust: none;
   }
-  
+
   .pagination-btn:hover:not(:disabled) {
     background: Highlight;
     color: HighlightText;
     transform: none;
   }
-  
+
   .pagination-btn:disabled {
     background: GrayText;
     color: Canvas;
   }
-  
+
   .pagination-btn:focus {
     outline: 2px solid Highlight;
     forced-color-adjust: none;
   }
-  
+
   .page-info {
     background: Canvas;
     color: CanvasText;
     border: 1px solid CanvasText;
     forced-color-adjust: none;
   }
-  
+
   .page-current {
     color: CanvasText;
   }
-  
+
   .page-separator, .page-total {
     color: CanvasText;
   }
@@ -460,21 +474,21 @@ h1 {
   .portal-ring {
     animation: none;
   }
-  
+
   .character-card,
   .pagination-btn,
   .character-image {
     transition: none;
   }
-  
+
   .character-card:hover {
     transform: none;
   }
-  
+
   .character-card:hover .character-image {
     transform: none;
   }
-  
+
   .pagination-btn:hover:not(:disabled) {
     transform: none;
   }

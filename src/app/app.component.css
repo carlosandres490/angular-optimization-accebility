@@ -10,9 +10,9 @@
   display: flex;
   justify-content: center;
   padding: 20px 0;
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(0, 0, 0, 0.4);
   backdrop-filter: blur(10px);
-  border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+  border-bottom: 2px solid rgba(255, 255, 255, 0.3);
 }
 
 .banner-image {
@@ -91,27 +91,27 @@
   .app-container {
     background: white;
   }
-  
+
   .app-header {
     background: white;
     border-bottom: 2px solid black;
   }
-  
+
   .banner-image {
     border: 2px solid black;
     box-shadow: none;
   }
-  
+
   .app-footer {
     background: black;
     color: white;
     border-top: 2px solid black;
   }
-  
+
   .footer-text a {
     color: #0066cc;
   }
-  
+
   .footer-text a:hover {
     color: #004499;
   }
@@ -123,33 +123,33 @@
     background: Canvas;
     forced-color-adjust: none;
   }
-  
+
   .app-header {
     background: Canvas;
     border-bottom: 1px solid CanvasText;
     forced-color-adjust: none;
   }
-  
+
   .banner-image {
     forced-color-adjust: none;
   }
-  
+
   .app-footer {
     background: Canvas;
     color: CanvasText;
     border-top: 1px solid CanvasText;
     forced-color-adjust: none;
   }
-  
+
   .footer-text a {
     color: LinkText;
     forced-color-adjust: none;
   }
-  
+
   .footer-text a:visited {
     color: VisitedText;
   }
-  
+
   .footer-text a:hover {
     color: Highlight;
   }
@@ -161,11 +161,11 @@
   .footer-image {
     transition: none;
   }
-  
+
   .banner-image:hover {
     transform: none;
   }
-  
+
   .footer-text a {
     transition: none;
   }

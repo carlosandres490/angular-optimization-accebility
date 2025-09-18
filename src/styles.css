@@ -41,23 +41,23 @@ img {
     background: white;
     color: black;
   }
-  
+
   .app-container {
     background: white !important;
   }
-  
+
   .character-card {
     border: 2px solid black !important;
     background: white !important;
     color: black !important;
   }
-  
+
   .pagination-btn {
     background: black !important;
     color: white !important;
     border: 2px solid black !important;
   }
-  
+
   .pagination-btn:disabled {
     background: gray !important;
     color: white !important;
@@ -70,57 +70,57 @@ img {
     background: Canvas;
     color: CanvasText;
   }
-  
+
   .app-container {
     background: Canvas;
     color: CanvasText;
   }
-  
+
   .character-card {
     background: Canvas;
     color: CanvasText;
     border: 1px solid CanvasText;
     forced-color-adjust: none;
   }
-  
+
   .pagination-btn {
     background: ButtonFace;
     color: ButtonText;
     border: 1px solid ButtonText;
     forced-color-adjust: none;
   }
-  
+
   .pagination-btn:hover:not(:disabled) {
     background: Highlight;
     color: HighlightText;
   }
-  
+
   .pagination-btn:disabled {
     background: GrayText;
     color: Canvas;
   }
-  
+
   .status-indicator {
     background: CanvasText !important;
     color: Canvas !important;
     forced-color-adjust: none;
   }
-  
+
   .app-header, .app-footer {
     background: Canvas;
     border: 1px solid CanvasText;
     forced-color-adjust: none;
   }
-  
+
   a {
     color: LinkText;
     forced-color-adjust: none;
   }
-  
+
   a:visited {
     color: VisitedText;
   }
-  
+
   .banner-image, .footer-image {
     forced-color-adjust: none;
   }
@@ -159,11 +159,11 @@ img {
     background: white;
     border: 1px solid black;
   }
-  
+
   ::-webkit-scrollbar-thumb {
     background: black;
   }
-  
+
   ::-webkit-scrollbar-thumb:hover {
     background: #333;
   }

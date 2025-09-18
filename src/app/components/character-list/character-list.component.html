@@ -22,13 +22,11 @@
   
   <div *ngIf="!loading && !error">
     <section aria-labelledby="page-title">
-      <div class="characters-grid" 
-           role="grid" 
-           aria-label="Rick and Morty characters"
-           [attr.aria-rowcount]="characters.length">
-        <div *ngFor="let character of characters; let i = index" 
-                 class="character-card"
-                 [attr.aria-label]="getStatusAnnouncement(character)">
+      <ul class="characters-grid" 
+          aria-label="Rick and Morty characters">
+        <li *ngFor="let character of characters; let i = index" 
+            class="character-card"
+            [attr.aria-label]="getStatusAnnouncement(character)">
           <div class="character-image-container">
             <img [src]="character.image" 
                  [alt]="character.name + ' character'" 
@@ -68,8 +66,8 @@
               </div>
             </div>
           </div>
-        </div>
-      </div>
+        </li>
+      </ul>
     </section>
     
     <nav class="pagination" 

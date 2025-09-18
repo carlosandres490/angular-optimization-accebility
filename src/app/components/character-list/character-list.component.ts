@@ -36,7 +36,7 @@ export class CharacterListComponent implements OnInit {
         this.currentPage = page;
         this.totalPages = response.info.pages;
         this.loading = false;
-        
+
         // Announce successful load
         this.liveAnnouncer.announce(
           `Loaded ${response.results.length} characters on page ${page} of ${response.info.pages}`
@@ -46,7 +46,7 @@ export class CharacterListComponent implements OnInit {
         this.error = 'Error loading characters. Please try again.';
         this.loading = false;
         console.error('Error:', error);
-        
+
         // Announce error
         this.liveAnnouncer.announce('Error loading characters. Please try again.');
       }
