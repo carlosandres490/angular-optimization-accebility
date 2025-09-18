@@ -1,7 +1,7 @@
 <div class="character-container">
   <h1 id="page-title">Explore the Multiverse</h1>
   <p class="subtitle">Discover all the crazy characters from Rick and Morty!</p>
-  
+
   <output *ngIf="loading" class="loading" aria-live="polite">
     <div class="portal-loader" aria-hidden="true">
       <div class="portal-ring"></div>
@@ -10,29 +10,29 @@
     </div>
     <p>Loading characters from the multiverse...</p>
   </output>
-  
+
   <div *ngIf="error" class="error" role="alert" aria-live="assertive">
     <p>{{ error }}</p>
-    <button (click)="loadCharacters(currentPage)" 
+    <button (click)="loadCharacters(currentPage)"
             class="retry-btn"
             aria-label="Retry loading characters">
       Try Again
     </button>
   </div>
-  
+
   <div *ngIf="!loading && !error">
     <section aria-labelledby="page-title">
-      <ul class="characters-grid" 
+      <ul class="characters-grid"
           aria-label="Rick and Morty characters">
-        <li *ngFor="let character of characters; let i = index" 
+        <li *ngFor="let character of characters; let i = index"
             class="character-card"
             [attr.aria-label]="getStatusAnnouncement(character)">
           <div class="character-image-container">
-            <img [src]="character.image" 
-                 [alt]="character.name + ' character'" 
+            <img [src]="character.image"
+                 [alt]="character.name + ' character'"
                  class="character-image">
             <div class="character-overlay">
-              <span class="status-indicator" 
+              <span class="status-indicator"
                     [ngClass]="getStatusClass(character.status)"
                     [attr.aria-label]="'Status: ' + character.status">
                 {{ character.status }}
@@ -69,27 +69,27 @@
         </li>
       </ul>
     </section>
-    
-    <nav class="pagination" 
-         role="navigation" 
+
+    <nav class="pagination"
+         role="navigation"
          aria-label="Character pagination"
          *ngIf="totalPages > 1">
-      <button (click)="previousPage()" 
+      <button (click)="previousPage()"
               [disabled]="currentPage === 1"
               class="pagination-btn prev-btn"
               [attr.aria-label]="'Go to previous page, page ' + (currentPage - 1)">
         ← Previous
       </button>
-      
-      <output class="page-info" 
+
+      <output class="page-info"
            aria-live="polite"
            [attr.aria-label]="'Page ' + currentPage + ' of ' + totalPages">
         <span class="page-current">{{ currentPage }}</span>
         <span class="page-separator">of</span>
         <span class="page-total">{{ totalPages }}</span>
       </output>
-      
-      <button (click)="nextPage()" 
+
+      <button (click)="nextPage()"
               [disabled]="currentPage === totalPages"
               class="pagination-btn next-btn"
               [attr.aria-label]="'Go to next page, page ' + (currentPage + 1)">
