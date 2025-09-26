@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+  <file source-language="en-US" datatype="plaintext" original="ng2.template">
+    <body>
+      <trans-unit id="alt.rick-morty-banner" datatype="html">
+        <source>Rick and Morty Banner</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/app.component.html</context>
+          <context context-type="linenumber">3</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="alt.rick-morty-footer" datatype="html">
+        <source>Rick and Morty Footer</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/app.component.html</context>
+          <context context-type="linenumber">12</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="footer.copyright" datatype="html">
+        <source>© 2025 Rick and Morty Character Explorer</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/app.component.html</context>
+          <context context-type="linenumber">14</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="footer.data-provided" datatype="html">
+        <source>Data provided by <x id="START_LINK" ctype="x-a" equiv-text="&lt;a href=&quot;https://rickandmortyapi.com/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;"/>The Rick and Morty API<x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a&gt;"/></source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/app.component.html</context>
+          <context context-type="linenumber">15</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="title.explore-multiverse" datatype="html">
+        <source>Explore the Multiverse</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/character-list/character-list.component.html</context>
+          <context context-type="linenumber">2</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="subtitle.discover-characters" datatype="html">
+        <source>Discover all the crazy characters from Rick and Morty!</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/character-list/character-list.component.html</context>
+          <context context-type="linenumber">3</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="loading.characters-multiverse" datatype="html">
+        <source>Loading characters from the multiverse...</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/character-list/character-list.component.html</context>
+          <context context-type="linenumber">11</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="button.try-again" datatype="html">
+        <source>Try Again</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/character-list/character-list.component.html</context>
+          <context context-type="linenumber">16</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="label.species" datatype="html">
+        <source>Species:</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/character-list/character-list.component.html</context>
+          <context context-type="linenumber">39</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="label.type" datatype="html">
+        <source>Type:</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/character-list/character-list.component.html</context>
+          <context context-type="linenumber">43</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="label.gender" datatype="html">
+        <source>Gender:</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/character-list/character-list.component.html</context>
+          <context context-type="linenumber">47</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="label.last-known-location" datatype="html">
+        <source>Last known location:</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/character-list/character-list.component.html</context>
+          <context context-type="linenumber">52</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="label.first-seen-in" datatype="html">
+        <source>First seen in:</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/character-list/character-list.component.html</context>
+          <context context-type="linenumber">56</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="button.previous" datatype="html">
+        <source> ← Previous </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/character-list/character-list.component.html</context>
+          <context context-type="linenumber">70,72</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="pagination.of" datatype="html">
+        <source>of</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/character-list/character-list.component.html</context>
+          <context context-type="linenumber">76</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="button.next" datatype="html">
+        <source> Next → </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/character-list/character-list.component.html</context>
+          <context context-type="linenumber">84,86</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="240993378622704758" datatype="html">
+        <source>Error loading characters. Please try again.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/character-list/character-list.component.ts</context>
+          <context context-type="linenumber">34</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="648571910442239392" datatype="html">
+        <source>Alive</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/character-list/character-list.component.ts</context>
+          <context context-type="linenumber">67</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="1311080303172813893" datatype="html">
+        <source>Dead</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/character-list/character-list.component.ts</context>
+          <context context-type="linenumber">69</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="4467323362722952678" datatype="html">
+        <source>Unknown</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/character-list/character-list.component.ts</context>
+          <context context-type="linenumber">71</context>
+        </context-group>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

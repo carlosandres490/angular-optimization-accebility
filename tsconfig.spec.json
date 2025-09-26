@@ -4,11 +4,17 @@
   "compilerOptions": {
     "outDir": "./out-tsc/spec",
     "types": [
-      "jasmine"
-    ]
+      "jest",
+      "node",
+      "@angular/localize"
+    ],
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true
   },
   "include": [
     "src/**/*.spec.ts",
-    "src/**/*.d.ts"
+    "src/**/*.test.ts",
+    "src/**/*.d.ts",
+    "setup-jest.ts"
   ]
 }

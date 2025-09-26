@@ -31,7 +31,7 @@ export class CharacterListComponent implements OnInit {
         this.loading = false;
       },
       error: (error) => {
-        this.error = 'Error loading characters. Please try again.';
+        this.error = $localize`Error loading characters. Please try again.`;
         this.loading = false;
         console.error('Error:', error);
       }
@@ -58,6 +58,17 @@ export class CharacterListComponent implements OnInit {
         return 'status-dead';
       default:
         return 'status-unknown';
+    }
+  }
+
+  getLocalizedStatus(status: string): string {
+    switch (status.toLowerCase()) {
+      case 'alive':
+        return $localize`Alive`;
+      case 'dead':
+        return $localize`Dead`;
+      default:
+        return $localize`Unknown`;
     }
   }
 }
